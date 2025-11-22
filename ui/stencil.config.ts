@@ -14,6 +14,14 @@ export const config: Config = {
     // fix for loading in Vite
     experimentalImportInjection: true,
   },
+  devServer: {
+    address: "0.0.0.0",
+    https: {
+      cert: "./certs/cert.pem",
+      key: "./certs/key.pem",
+    },
+    port: 3333,
+  },
   outputTargets: [
     {
       type: "dist",
